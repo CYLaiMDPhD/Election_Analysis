@@ -7,8 +7,6 @@
 
 # Add Dependencies
 import csv
-import random
-import numpy
 import os
 
 
@@ -27,18 +25,19 @@ candidate_options = []
 # Make empty dictionary to store votes for each candidate
 candidate_votes = {}
 
-# Open file and read it
+# Set variables for winner, track votes and percentages
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
+
+
+# Open raw election results file and read it
 with open(file_to_load) as election_data:
     # Read file as a csv using csv.reader function
     file_reader = csv.reader(election_data)
 
     # Read/skip the headers row
     headers = next(file_reader)
-
-    # Set variables for winner
-    winning_candidate = ""
-    winning_count = 0
-    winning_percentage = 0
 
     # Iterate through all rows
     for row in file_reader:
@@ -56,26 +55,49 @@ with open(file_to_load) as election_data:
        
         candidate_votes[candidate_name] += 1
 
+with open(file_to_save, "w") as txt_file:
+    # Write results title and total votes
+    election_results = (
+        f"\nElection Results\n"
+        f"-------------------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------------------\n"
+    )
+    print(election_results, end = "")
+    # Save title and final vote count to text file
+    txt_file.write(election_results)
 
-# Find percentage of votes for each candidate
-for candidate_name in candidate_votes:
-    # Get votes for each candidate,  then calculate percent
-    votes = candidate_votes[candidate_name]
-    vote_percentage = float(votes)/float(total_votes)*100
-    print(f"{candidate_name}: {round(vote_percentage,1)}% ({votes:,})\n")
+    # Find percentage of votes for each candidate
+    for candidate_name in candidate_votes:
+        # Get votes for each candidate, then calculate percent
+        votes = candidate_votes[candidate_name]
+        vote_percentage = float(votes)/float(total_votes)*100
 
-    # Determine winner
-    if (votes > winning_count) and (vote_percentage > winning_percentage):
-        winning_count = votes
-        winning_percentage = vote_percentage
-        winning_candidate = candidate_name
+        #print(f"{candidate_name}: {round(vote_percentage,1)}% ({votes:,})\n")
 
-# Print results
-winning_candidate_summary = (
-    f"-------------------------------------\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winning Vote Count: {winning_count:,}\n"
-    f"Winning Percentage: {winning_percentage:.1f}\n"
-    f"-------------------------------------\n"
-)
-print(winning_candidate_summary)
+        # Make variable for candidate results
+        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        print(candidate_results)
+
+        # Write candidate results to text file
+        txt_file.write(candidate_results)
+
+
+        # Determine winner
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+            winning_count = votes
+            winning_percentage = vote_percentage
+            winning_candidate = candidate_name
+
+    # Print results
+    winning_candidate_summary = (
+        f"-------------------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}\n"
+        f"-------------------------------------\n"
+    )
+    print(winning_candidate_summary)
+
+    # Write winner's summary to text file
+    txt_file.write(winning_candidate_summary)
