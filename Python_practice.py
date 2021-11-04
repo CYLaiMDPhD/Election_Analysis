@@ -37,3 +37,15 @@ for county_dict in voting_data:
 
 #for county, voters in counties_dict.items():
     #print(f"{county} county has {voters} registered voters.")
+
+
+import datetime as dt
+now = dt.datetime.now()
+print(now)
+
+
+import csv
+import random
+import numpy
+print(dir(numpy))
+
