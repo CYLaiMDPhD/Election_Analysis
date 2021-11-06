@@ -1,6 +1,6 @@
 # Election_Analysis
 
-*Note: This repository was generated to fulfill assignments (Module 3 Exercises and Challenge) for the UC Berkeley Data Analytics and Visualization Bootcamp. Challenge submitted on 11-6-21 for grading.*
+*Note: This repository was generated to fulfill assignments (Module 3 Exercises and Challenge) for the UC Berkeley Data Analytics and Visualization Bootcamp. Challenge submitted on 11-5-21 for grading.*
 
 ## Project Overview
 A Colorado Board of Elections employee has given you the following tasks to complete the election audit of a recent local congressional election.
