@@ -48,7 +48,7 @@ This challenge builds off of previous work we performed for the Colorado Board o
 ### Overview of Election Audit
 In addition to our previous audit of election results by candidate, the election commission has requested information about voting results by county. This supplemental analysis adds county vote results (total votes per county, percentage of votes per county, and county with largest voter turnout) for this election.
 
-The same source material and software was used for this additional analysis was the same as those used for the above preliminary summary ("election_results.csv", Python 3.8.8, and Visual Studio Code 1.61.2). The full audit results are presented below.
+The same source material and software were used for this additional analysis as those used for the above preliminary summary ("election_results.csv", Python 3.8.8, and Visual Studio Code 1.61.2). The full audit results are presented below.
 
 ### Election Audit Results
 A total of 369,711 votes were cast for this election across three counties. Unfortunately, we do not have the total number of registered voters across these three counties to determine absolute voter turnout.
