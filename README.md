@@ -1,6 +1,6 @@
 # Election_Analysis
 
-*Note: This repository was generated to fulfill assignments (Module 3 Exercises and Challenge) for the UC Berkeley Data Analytics and Visualization Boot Camp. The analysis, content, and format of this report were based on the grading rubric.*
+*Note: This repository was generated to fulfill assignments (Module 3 Exercises and Challenge) for the UC Berkeley Data Analytics and Visualization Bootcamp. The analysis, content, and format of this report were based on the grading rubric.*
 
 ## Project Overview
 An election audit has been requested by a state board of elections for a recent congressional race. The following specific results and analyses are requested:
