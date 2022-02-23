@@ -1,9 +1,9 @@
 # Election_Analysis
 
-*Note: This repository was generated to fulfill assignments (Module 3 Exercises and Challenge) for the UC Berkeley Data Analytics and Visualization Bootcamp. Challenge submitted on 11-5-21 for grading.*
+*Note: This repository was generated to fulfill assignments (Module 3 Exercises and Challenge) for the UC Berkeley Data Analytics and Visualization Boot Camp. The analysis, content, and format of this report were based on the grading rubric.*
 
 ## Project Overview
-A Colorado Board of Elections employee has given you the following tasks to complete the election audit of a recent local congressional election.
+An election audit has been requested by a state board of elections for a recent congressional race. The following specific results and analyses are requested:
 
 1. Calculate the total number of votes cast.
 2. Get a complete list of candidates who received votes.
@@ -14,11 +14,11 @@ A Colorado Board of Elections employee has given you the following tasks to comp
 
 ### Resources
 
-* Data Source: election_results.csv
+* Data Source: election_results.csv, provided by the course
 * Software: Python 3.8.8, Visual Studio Code 1.61.2
 
 
-### Summary
+### Summary of Module Tasks
 
 The Analysis of the election show that:
 
@@ -40,7 +40,7 @@ The Analysis of the election show that:
 ---
 
 ## Challenge Overview
-This challenge builds off of previous work we performed for the Colorado Board of Elections to include additional vote results by county. 
+This challenge builds off of previous work performed for the board of elections and includes additional vote results by county. 
 
 
 ## Challenge Summary and Results
