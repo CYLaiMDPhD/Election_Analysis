@@ -19,9 +19,9 @@ An election audit has been requested by a state board of elections for a recent 
 
 
 ### Summary of Module Tasks
+*Based on guided code in Python_practice.py and PyPoll.py*
 
 The Analysis of the election show that:
-*Based on guided code in Python_practice.py and PyPoll.py*
 
 * There were 369,711 votes cast in the election.
 * The candidates were:
@@ -42,7 +42,8 @@ The Analysis of the election show that:
 
 ## Challenge Overview
 This challenge builds off of previous work performed for the board of elections and includes additional vote results by county. 
-*Based on original code in PyPoll_challenge.py*
+
+*Original code in PyPoll_challenge.py*
 
 ## Challenge Summary and Results
 
